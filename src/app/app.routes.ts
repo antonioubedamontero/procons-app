@@ -1,3 +1,19 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { StepperPageComponent } from './pages/stepper-page/stepper-page.component';
+
+export const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    component: StepperPageComponent,
+  },
+  {
+    path: 'result',
+    loadComponent: () => import('./pages/result-page/result-page.component'),
+  },
+  {
+    path: '**',
+    redirectTo: '/',
+  },
+];
