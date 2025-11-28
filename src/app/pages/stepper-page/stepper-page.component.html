@@ -1,1 +1,16 @@
-<p>Stepper page</p>
+<mat-stepper #stepper>
+  <mat-step [stepControl]="problemFormGroup" errorMessage="El problema es obligatorio">
+    <ng-template matStepLabel>Indica el problema</ng-template>
+    <app-problem [problemFormGroup]="problemFormGroup" />
+  </mat-step>
+
+  <mat-step [stepControl]="prosFormGroup" errorMessage="Los pros son obligatorios">
+    <ng-template matStepLabel>Indica las cosas a favor</ng-template>
+    <app-pros-list [prosFormGroup]="prosFormGroup" />
+  </mat-step>
+
+  <mat-step [stepControl]="consFormGroup" errorMessage="Los contras son obligatorios">
+    <ng-template matStepLabel>Indica las cosas en contra</ng-template>
+    <app-cons-list [consFormGroup]="consFormGroup" />
+  </mat-step>
+</mat-stepper>

@@ -1,0 +1,14 @@
+<form class="problem-form-container" [formGroup]="problemFormGroup()">
+  <mat-form-field>
+    <mat-label>Problema</mat-label>
+    <input matInput placeholder="Describe el problema" formControlName="problem" required />
+
+    @if (hasError('problem')) {
+    <mat-error>{{ getErrorsFromField('problem') }}</mat-error>
+    }
+  </mat-form-field>
+
+  <div class="button-container">
+    <button matButton="filled" matStepperNext>Siguiente</button>
+  </div>
+</form>
