@@ -33,6 +33,6 @@ export class StepperPageComponent {
   });
 
   consFormGroup = this.fb.group({
-    pros: this.fb.array([]),
+    cons: this.fb.array([]),
   });
 }

@@ -1,7 +1,14 @@
-<form class="cons-form-container" [formGroup]="consFormGroup()">
-  <p>Aquí van los contras</p>
-  <div class="button-container">
-    <button matButton="filled" matStepperPrevious>Anterior</button>
-    <button matButton="filled" matStepperNext>Siguiente</button>
-  </div>
-</form>
+<section class="cons-list-container">
+  <h2>Lista de cosas en contra</h2>
+
+  <form class="cons-form-container" [formGroup]="consFormGroup()">
+    <lib-procons-list listItemType="con" [proconsListData]="proconsAsFormArray" />
+
+    <mat-divider></mat-divider>
+
+    <div class="button-container">
+      <button matButton="filled" matStepperPrevious>Anterior</button>
+      <button matButton="filled" matStepperNext>Siguiente</button>
+    </div>
+  </form>
+</section>

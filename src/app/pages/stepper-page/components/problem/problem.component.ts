@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-problem',
@@ -14,6 +15,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatInputModule,
     MatFormFieldModule,
     MatStepperModule,
+    MatDividerModule,
   ],
   templateUrl: './problem.component.html',
   styleUrl: './problem.component.scss',

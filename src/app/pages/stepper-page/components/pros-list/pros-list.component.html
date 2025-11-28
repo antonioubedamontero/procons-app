@@ -1,7 +1,14 @@
-<form class="pros-form-container" [formGroup]="prosFormGroup()">
-  <p>Aquí van los pros</p>
-  <div class="button-container">
-    <button matButton="filled" matStepperPrevious>Anterior</button>
-    <button matButton="filled" matStepperNext>Siguiente</button>
-  </div>
-</form>
+<section class="pros-list-container">
+  <h2>Lista de cosas a favor</h2>
+
+  <form class="pros-form-container" [formGroup]="prosFormGroup()">
+    <lib-procons-list listItemType="pro" [proconsListData]="proconsAsFormArray" />
+
+    <mat-divider></mat-divider>
+
+    <div class="button-container">
+      <button matButton="filled" matStepperPrevious>Anterior</button>
+      <button matButton="filled" matStepperNext>Siguiente</button>
+    </div>
+  </form>
+</section>
